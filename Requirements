@@ -1,0 +1,15 @@
+1) multiple floors
+2) there is an entry at parking lot
+3) there can be multiple entry gates but only 1 entry per floor
+4) a ticket is given at gate
+5) ticket contains :- vehicle number , vehicle number , vehicle type , parking spot number
+6) different vehicle types can have different types of parking spot
+7) entry gate will have an attendant
+8) parking spot might have some special attributes depending on their type :- EV parking spot will have charger , Luxury parking spot will have additional security
+9) spot allocation strategy :- allocate randomly , allocate serially (strategy + factory design pattern)
+10) there can be multiple exit gates but only 1 exit per floor
+11) attendant present at exit gate
+12) ticket is given to attendant and bill is generated
+13) bill can be paid with multiple payment modes :- cash,card,upi
+14) bill should be generated based on time and vehicle type
+15) surge charges will be there (use strategy design pattern for billing)

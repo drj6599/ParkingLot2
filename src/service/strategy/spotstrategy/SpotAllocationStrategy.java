@@ -1,8 +1,9 @@
 package service.strategy.spotstrategy;
 
+import model.ParkingLot;
 import model.ParkingSpot;
 import model.Vehicle;
 
 public interface SpotAllocationStrategy {
-    ParkingSpot getSpotForVehicle(Vehicle vehicle);
+    ParkingSpot getSpotForVehicle(ParkingLot parkingLot , Vehicle vehicle);
 }

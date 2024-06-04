@@ -13,7 +13,7 @@ public class VehicleRepository {
         this.vehicleMap = new HashMap<Integer,Vehicle>();
     }
 
-    public Vehicle getTicket(int vehicleId){
+    public Vehicle getVehicle(int vehicleId){
         Vehicle vehicle = vehicleMap.get(vehicleId);
         if(vehicle == null){
             throw new VehicleNotFoundException("Vehicle is not present in the database");
@@ -21,7 +21,7 @@ public class VehicleRepository {
         return vehicle;
     }
 
-    public void addTicket(Vehicle vehicle){
+    public void add(Vehicle vehicle){
         vehicleMap.put(vehicle.getId(), vehicle);
         System.out.println("Vehicle added to the database successfully");
     }

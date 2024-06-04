@@ -13,7 +13,7 @@ public class ParkingLotRepository {
         this.parkingLotMap = new HashMap<Integer,ParkingLot>();
     }
 
-    public ParkingLot getTicket(int parkingLotId){
+    public ParkingLot getParkingLot(int parkingLotId){
         ParkingLot parkingLot = parkingLotMap.get(parkingLotId);
         if(parkingLot == null){
             throw new ParkingLotNotFoundException("Parking Lot is not present in the database");
@@ -21,7 +21,7 @@ public class ParkingLotRepository {
         return parkingLot;
     }
 
-    public void addTicket(ParkingLot parkingLot){
+    public void add(ParkingLot parkingLot){
         parkingLotMap.put(parkingLot.getId(), parkingLot);
         System.out.println("Parking Lot added to the database successfully");
     }

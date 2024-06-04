@@ -21,7 +21,7 @@ public class GateRepository {
         return gate;
     }
 
-    public void addTicket(Gate gate){
+    public void add(Gate gate){
         gateMap.put(gate.getId(), gate);
         System.out.println("Gate added to the database successfully");
     }

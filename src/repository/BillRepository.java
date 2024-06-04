@@ -15,7 +15,7 @@ public class BillRepository {
         this.billMap = new HashMap<Integer,Bill>();
     }
 
-    public Bill getTicket(int billId){
+    public Bill getBill(int billId){
         Bill bill = billMap.get(billId);
         if(bill == null){
             throw new BillNotFoundException("Bill is not present in the database");
@@ -23,7 +23,7 @@ public class BillRepository {
         return bill;
     }
 
-    public void addTicket(Bill bill){
+    public void add(Bill bill){
         billMap.put(bill.getId(), bill);
         System.out.println("Bill added to the database successfully");
     }

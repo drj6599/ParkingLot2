@@ -13,7 +13,7 @@ public class PaymentRepository {
         this.paymentMap = new HashMap<Integer,Payment>();
     }
 
-    public Payment getTicket(int paymentId){
+    public Payment getPayment(int paymentId){
         Payment payment = paymentMap.get(paymentId);
         if(payment == null){
             throw new PaymentNotFoundException("Payment is not present in the database");
@@ -21,7 +21,7 @@ public class PaymentRepository {
         return payment;
     }
 
-    public void addTicket(Payment payment){
+    public void add(Payment payment){
         paymentMap.put(payment.getId(), payment);
         System.out.println("Payment added to the database successfully");
     }
